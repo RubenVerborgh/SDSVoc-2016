@@ -14,6 +14,28 @@ p.venue {
   margin-bottom: 1em;
 }
 
+.instructions li {
+  font-weight: normal !important;
+  font-style: italic;
+}
+.long.instructions {
+  overflow-y: scroll;
+  max-height: 11em;
+}
+.long.instructions li {
+  font-size: .66em;
+  margin-bottom: .5em;
+}
+p.address {
+  font-style: italic;
+  padding-top: 3em;
+}
+
+.slide .shout {
+  font-size: 2em;
+  line-height: 1.3;
+}
+
 .shower .slide.title h3 {
   color: #999999;
   font-weight: normal;
