@@ -246,6 +246,101 @@
     </ul>
   </div>
 
+  <div class="slide" id="mime-types">
+    <h2>
+      How a representation should be parsed<br>
+      is indicated with a MIME type.
+    </h2>
+    <ul>
+      <li>request
+        <ul>
+          <li><code>GET /decisions/3147.json HTTP/1.1</code></li>
+          <li><code>Host: council.my</code></li>
+          <li>…</li>
+        </ul>
+      </li>
+      <li>response
+        <ul>
+          <li><code>HTTP/1.1 200 OK</code></li>
+          <li><code>Content-Type: <strong>application/json</strong></code></li>
+          <li>…</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="underspecification">
+    <h2>
+      MIME types are an underspecification<br>
+      of the needed interpretation.
+    </h2>
+    <p>MIME types underspecify on:
+    <ul>
+      <li>the <a href="#underspecification-syntax">syntactical level</a></li>
+      <li>the <a href="#underspecification-structure">structural level</a></li>
+      <li>the <a href="#underspecification-model">modelling level</a></li>
+    </ul>
+  </div>
+
+  <div class="slide" id="underspecification-syntax">
+    <h2>
+      A MIME type does not indicate<br>
+      the most specific <em>syntax</em>.
+    </h2>
+    <p><code>3147.json</code> is all of these:</p>
+    <ul>
+      <li class="next"><code>application/octet-stream</code></li>
+      <li class="next"><code>application/json</code></li>
+      <li class="next"><code>application/ld+json</code></li>
+    </ul>
+  </div>
+
+  <div class="slide" id="underspecification-structure">
+    <h2>
+      A MIME type does not indicate<br>
+      the <em>structure</em> within the syntax.
+    </h2>
+    <ul>
+      <li>The JSON MIME type allows many structures.
+        <ul>
+          <li class="next">Yet API clients typically <em>assume</em> a very specific structure.</li>
+        </ul>
+      </li>
+      <li class="next">RDF formats are immune to this.
+        <ul>
+          <li>All possible serializations represent the same graph.</li>
+        </ul>
+      </li>
+      <li class="next">JSON-LD is especially tricky in this regard.
+        <ul>
+          <li class="next">When interpreted as <em>RDF triples</em>, structure is unimportant.</li>
+          <li class="next">When interpreted as a <em>JSON tree</em>, framing is crucial.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="underspecification-model">
+    <h2>
+      A MIME type does not indicate<br>
+      how content was <em>modelled</em>.
+    </h2>
+    <ul>
+      <li class="next"><strong>Non-semantic formats:</strong> identical structures<br>
+          can still have different meanings.
+        <ul>
+          <li>JSON doesn't specify an interpretation.</li>
+        </ul>
+      </li>
+      <li class="next"><strong>Semantic formats:</strong> the same meaning<br>
+          can be expressed with different vocabularies.
+        <ul>
+          <li>Matching them requires reasoning and/or ontologies.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="toc-conneg">
     <h2>Your JSON is not my JSON</h2>
     <ul>
