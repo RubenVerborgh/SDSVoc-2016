@@ -201,7 +201,7 @@
 
   <div class="slide" id="representation-urls-problems">
     <h2>
-      Only having representations-specific URLs<br>
+      Minting <em>only</em> representations-specific URLs<br>
       leads to several problems.
     </h2>
     <ul>
@@ -219,6 +219,28 @@
         <ul>
           <li class="next">Do clients using <em>different</em> URLs talk about the <em>same</em> thing?</li>
           <li class="next">If they talk about the <em>same</em> thing, why use <em>different</em> URLs?</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="representation-independent-url">
+    <h2>
+      Each resource should always have<br>
+      a representation-independent URL.
+    </h2>
+    <ul>
+      <li><strong>mandatory:</strong> URL for the decision resource
+        <ul>
+          <li><code>https://council.my/decisions/3147/</code></li>
+        </ul>
+      </li>
+      <li><strong>optional:</strong> URLs for representations of the resource
+        <ul>
+          <li><code>https://council.my/decisions/3147.json</code></li>
+          <li><code>https://council.my/decisions/3147.ttl</code></li>
+          <li><code>https://council.my/decisions/en/3147.xml</code></li>
+          <li>…</li>
         </ul>
       </li>
     </ul>
