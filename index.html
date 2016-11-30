@@ -397,6 +397,33 @@ Content-Language: en
     </ul>
   </div>
 
+  <div class="slide" id="more-specific-mime-types">
+    <h2>
+      Should we simply introduce<br>
+      more specific MIME types then?
+    </h2>
+    <p>
+      A council decision could have MIME type
+      <code>application/vnd.council.my.decision+json</code>
+    </p>
+    <ul>
+      <li class="next">unclear what parser to use</li>
+      <li class="next">highly application-specific</li>
+      <li class="next">finite extensibility</li>
+    </ul>
+  </div>
+
+  <div class="slide" id="rdf-specific-mime-types">
+    <h2>
+      Especially with RDF syntaxes,<br>
+      specific MIME types become problematic.
+    </h2>
+    <p class="next"><code>text/vnd.council.my.decision+turtle</code></p>
+    <p class="next"><code>application/vnd.council.my.decision+ld+json</code></p>
+    <p class="next"><code>application/vnd.foaf.person+ld+json</code></p>
+    <p class="next scroll"><code>application/vnd.council.my.decision.foaf.person+ld+json</code></p>
+  </div>
+
   <div class="toc slide" id="toc-profiles">
     <h2>Your JSON is not my JSON</h2>
     <ul>

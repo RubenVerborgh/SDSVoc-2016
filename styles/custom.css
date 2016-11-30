@@ -31,6 +31,10 @@ p.address {
   padding-top: 3em;
 }
 
+p.scroll {
+  overflow-y: scroll;
+}
+
 .slide .shout {
   font-size: 2em;
   line-height: 1.3;
