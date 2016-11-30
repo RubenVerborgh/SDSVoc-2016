@@ -35,6 +35,14 @@ p.scroll {
   overflow-y: scroll;
 }
 
+.slide blockquote {
+  padding: 0;
+  margin: 42px 60px;
+}
+.slide blockquote p {
+  font-style: italic;
+}
+
 .slide .shout {
   font-size: 2em;
   line-height: 1.3;
