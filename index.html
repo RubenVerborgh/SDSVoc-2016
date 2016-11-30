@@ -527,6 +527,33 @@ Content-Language: en
     </ul>
   </div>
 
+  <div class="slide" id="client-profile">
+    <h2>
+      Clients indicate what profiles<br>
+      they support or prefer.
+    </h2>
+    <ul>
+      <li>
+        by adding <code>profile</code> parameter(s) to <code>Accept</code>
+        <ul>
+          <li class="next">might lead to combinatorial explosion</li>
+        </ul>
+      </li>
+      <li class="next">
+        through a new <code>Accept-Profile</code> header
+        <ul>
+          <li>would need to be standardized</li>
+        </ul>
+      </li>
+      <li class="next">
+        profiles can be cumulative
+        <ul>
+          <li>other negotiation dimensions typically mutually exclusive</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="review">
     <h2>Your JSON is not my JSON</h2>
     <ul>
