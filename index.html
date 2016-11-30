@@ -501,6 +501,32 @@ Content-Language: en
     </blockquote>
   </div>
 
+  <div class="slide" id="server-profile">
+    <h2>
+      Servers indicate what profiles<br>
+      a representation uses.
+    </h2>
+    <ul>
+      <li>
+        as <code>profile</code> parameter of <code>Content-Type</code> header
+        <ul>
+          <li class="next">MIME type indicates which parser to use</li>
+          <li class="next">profile indicates structure and model</li>
+        </ul>
+      </li>
+      <li class="next">or using the <a href="https://tools.ietf.org/rfc/rfc5988"><code>Link</code> header</a>
+        with <a href="https://tools.ietf.org/rfc/rfc6906"><code>rel=profile</code></a>
+      </li>
+      <li class="next">multiple profiles can be combined
+        <ul class="next">
+          <li>“has this JSON-LD context”</li>
+          <li>“uses FOAF for people”</li>
+          <li>“uses Wikidata for places”</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="review">
     <h2>Your JSON is not my JSON</h2>
     <ul>
