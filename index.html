@@ -424,6 +424,28 @@ Content-Language: en
     <p class="next scroll"><code>application/vnd.council.my.decision.foaf.person+ld+json</code></p>
   </div>
 
+  <div class="slide" id="rdf-multiple-models">
+    <h2>
+      Since RDF is self-descriptive,<br>
+      can representations use multiple models?
+    </h2>
+    <ul>
+      <li class="next">responses become large</li>
+      <li class="next">modeling choices remain uncertain
+        <ul>
+          <li class="next">If no <code>foaf:Person</code> instances exist,<br>
+            are there no people, or was another vocabulary used?
+        </ul>
+      </li>
+      <li class="next">some models might be incompatible
+        <ul>
+          <li>Schema.org is great for discovery,<br>
+            but has (purposely) sloppy semantics.
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="toc-profiles">
     <h2>Your JSON is not my JSON</h2>
     <ul>
