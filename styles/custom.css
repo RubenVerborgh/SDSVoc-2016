@@ -35,6 +35,10 @@ p.scroll {
   overflow-y: scroll;
 }
 
+code.long {
+  letter-spacing: -1.5px;
+}
+
 .slide blockquote {
   padding: 0;
   margin: 42px 60px;
