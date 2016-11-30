@@ -182,10 +182,10 @@
 
   <div class="slide" id="url">
     <h2>
-      A local council decision is identified<br>
-      by a certain URL.
+      Domain resources are identified<br>
+      by specific URLs.
     </h2>
-    <p>This URL identifies a <strong>resource</strong>:</p>
+    <p>This URL identifies a local council decision:</p>
     <ul>
       <li><code>https://council.my/decisions/3147/</code></li>
     </ul>
@@ -193,8 +193,8 @@
 
   <div class="slide" id="representation-urls">
     <h2>
-      We can identify each representation<br>
-      with a specific URL.
+      Each representation of a resource<br>
+      can also be identified with a specific URL.
     </h2>
     <ul>
       <li><code>https://council.my/decisions/3147.html</code></li>
@@ -207,8 +207,8 @@
 
   <div class="slide" id="representation-urls-with-api">
     <h2>
-      We can identify each representation<br>
-      with a specific URL.
+      Each representation of a resource<br>
+      can also be identified with a specific URL.
     </h2>
     <ul>
       <li><code>https://council.my/decisions/3147/</code></li>
@@ -237,7 +237,6 @@
       <li>interoperability
         <ul>
           <li class="next">Do clients using <em>different</em> URLs talk about the <em>same</em> thing?</li>
-          <li class="next">If they talk about the <em>same</em> thing, why use <em>different</em> URLs?</li>
         </ul>
       </li>
     </ul>
@@ -254,7 +253,7 @@
           <li><code>https://council.my/decisions/3147/</code></li>
         </ul>
       </li>
-      <li><strong>optional:</strong> URLs for representations of the resource
+      <li class="next"><strong>optional:</strong> URLs for representations of the resource
         <ul>
           <li><code>https://council.my/decisions/3147.json</code></li>
           <li><code>https://council.my/decisions/3147.ttl</code></li>
@@ -265,24 +264,53 @@
     </ul>
   </div>
 
-  <div class="slide" id="mime-types">
+  <div class="slide" id="conneg-request">
     <h2>
-      How a representation should be parsed<br>
-      is indicated with a MIME type.
+      Using <em>HTTP content negotiation</em>,<br>
+      clients send representation preferences.
+    </h2>
+    <h3>request</h3>
+<pre><code>GET /decisions/3147.json HTTP/1.1
+Host: council.my
+Accept: application/ld+json;q=1.0,text/turtle;q=0.8
+Accept-Language: en
+…
+</code></pre>
+  </div>
+
+  <div class="slide" id="conneg-response">
+    <h2>
+      Using <em>HTTP content negotiation</em>,<br>
+      servers send a matching representation.
+    </h2>
+    <h3>response</h3>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: application/ld+json
+Content-Language: en
+…
+</code></pre>
+  </div>
+
+  <div class="slide" id="conneg-sustainable">
+    <h2>
+      Content negotiation allows for<br>
+      sustainable data publication.
     </h2>
     <ul>
-      <li>request
+      <li>sustainability
         <ul>
-          <li><code>GET /decisions/3147.json HTTP/1.1</code></li>
-          <li><code>Host: council.my</code></li>
-          <li>…</li>
+          <li class="next">The identifiers remain constant.</li>
         </ul>
       </li>
-      <li>response
+      <li>extensibility
         <ul>
-          <li><code>HTTP/1.1 200 OK</code></li>
-          <li><code>Content-Type: <strong>application/json</strong></code></li>
-          <li>…</li>
+          <li class="next">New MIME types can be added.</li>
+        </ul>
+      </li>
+      <li>interoperability
+        <ul>
+          <li class="next">Clients consuming different representations<br>
+            use the <em>same</em> URL for the <em>same</em> resource.</li>
         </ul>
       </li>
     </ul>
